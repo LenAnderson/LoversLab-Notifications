@@ -1,5 +1,7 @@
 console.log('this is the WebWorker');
+
 onmessage = function(evt) {
+  postMessage('message received');
   console.log('message received: ', evt);
   const note = evt.data;
   self.registration.showNotification(note.title, {
