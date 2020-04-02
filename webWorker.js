@@ -1,3 +1,4 @@
+console.log('this is the WebWorker');
 onmessage = function(evt) {
   console.log('message received: ', evt);
   const note = evt.data;
