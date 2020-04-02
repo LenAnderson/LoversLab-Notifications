@@ -4,7 +4,7 @@ onmessage = function(evt) {
   postMessage('message received');
   console.log('message received: ', evt);
   const note = evt.data;
-  self.registration.showNotification(note.title, {
+  new Notification(note.title, {
     badge: note.icon,
     icon: note.icon,
     body: note.time,
